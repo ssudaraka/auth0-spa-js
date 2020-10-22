@@ -66,9 +66,10 @@ const login = async () => {
 };
 
 const logout = () => {
-  auth0.logout({
-    returnTo: window.location.href
-  });
+  console.log(window.location.href);
+  // auth0.logout({
+  //   returnTo: window.location.href
+  // });
 };
 
 const refreshToken = async () => {
