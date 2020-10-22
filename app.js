@@ -13,7 +13,8 @@ const configureClient = async function () {
     client_id: config.clientId,
     useRefreshTokens: true,
     scope: "openid profile read:messages",
-    audience: "https://quickstarts/api"
+    audience: "https://quickstarts/api",
+    redirect_uri: window.location.href
   });
 };
 
