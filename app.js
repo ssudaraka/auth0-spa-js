@@ -1,7 +1,7 @@
 let auth0 = null;
 
 const fetchAuthConfig = function () {
-  return fetch("/auth_config.json");
+  return fetch("auth_config.json");
 };
 
 const configureClient = async function () {
@@ -61,7 +61,7 @@ const updateUI = async () => {
 
 const login = async () => {
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin
+    redirect_uri: window.location.href
   });
 };
 
