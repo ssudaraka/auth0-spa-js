@@ -1,0 +1,16 @@
+.gap-5px {
+  margin-top: 5px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}

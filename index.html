@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth0 SPA JS</title>
+    <link
+      rel="stylesheet"
+      href="./lib/bootstrap-4.5.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./lib/auth0/auth0-spa-js.production.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row gap-5px">
+        <div class="col">
+          <img class="logo" src="./images/auth0-logo.png" />
+        </div>
+      </div>
+      <div class="row gap-5px">
+        <div class="col">
+          <button
+            id="btn-login"
+            class="btn btn-primary"
+            disabled="true"
+            onclick="login()"
+          >
+            Login
+          </button>
+          <button
+            id="btn-refresh-token"
+            class="btn btn-primary"
+            onclick="refreshToken()"
+            disabled="true"
+          >
+            Refresh Token
+          </button>
+          <button
+            id="btn-logout"
+            class="btn btn-primary"
+            disabled="true"
+            onclick="logout()"
+          >
+            Logout
+          </button>
+          <button id="btn-enroll" class="btn btn-primary" onclick="enrollMFA()">
+            Enroll MFA
+          </button>
+        </div>
+      </div>
+      <div class="hidden row gap-5px gated-content">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">Access Token</div>
+            <div class="card-body">
+              <pre id="ipt-access-token"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden row gap-5px gated-content">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">User Profile</div>
+            <div class="card-body">
+              <pre id="ipt-user-profile"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
