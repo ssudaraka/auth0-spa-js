@@ -28,11 +28,12 @@ window.onload = async () => {
   }
 
   const query = window.location.search;
+  const path = window.location.pathname;
   if (query.includes("code=") && query.includes("state=")) {
     await auth0.handleRedirectCallback();
     updateUI();
 
-    window.history.replaceState({}, document.title, "/");
+    window.history.replaceState({}, document.title, path);
   }
 };
 
